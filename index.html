@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>King Bangcats - AI Chat</title>
+<meta name="description" content="Chat dengan King Bangcats, asisten AI yang ramah untuk caption, ide konten, dan bantuan harian.">
+<meta name="theme-color" content="#6D28D9">
+<meta property="og:title" content="King Bangcats - AI Chat">
+<meta property="og:description" content="Chat dengan King Bangcats, asisten AI yang ramah.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://king-bangcats.netlify.app">
+<meta property="og:image" content="https://files.catbox.moe/u7hr1x.jpg">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --main: #6D28D9;
+    --main-dark: #5B21B6;
+    --main-muda: #EDE9FE;
+    --bg: #F8F7FF;
+    --text: #1A1633;
+    --text-redup: #5B557A;
+    --border: #DDD8FE;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;font-family:"Plus Jakarta Sans", Arial, sans-serif;background:var(--bg);color:var(--text);padding:16px;line-height:1.6}
+  .box{max-width:700px;margin:auto;background:white;border-radius:16px;padding:22px;box-shadow:0 10px 30px rgba(0,0,0,.08)}
+  header{display:flex;gap:14px;align-items:center;background:var(--main);color:white;padding:18px;border-radius:14px}
+  header img{width:64px;height:64px;border-radius:50%;object-fit:cover;border:3px solid #FACC15;background:white}
+  header h1{margin:0;font-size:26px}
+  header p{margin:4px 0 0;opacity:.9}
+  label{display:block;font-weight:700;margin:18px 0 8px}
+  textarea{width:100%;min-height:120px;padding:14px;font-size:17px;border:2px solid var(--border);border-radius:12px;font-family:inherit;resize:vertical}
+  textarea:focus, button:focus{outline:3px solid #FACC15;outline-offset:2px}
+  button{min-height:52px;width:100%;margin-top:14px;border:0;border-radius:999px;background:var(--main);color:white;font-size:17px;font-weight:800;cursor:pointer}
+  button:hover{background:var(--main-dark)}
+  button:active{transform:scale(.98)}
+  button:disabled{opacity:.6}
+  .hint{color:var(--text-redup);font-size:14px}
+  #status{font-weight:700;margin-top:12px;min-height:24px}
+  #jawaban{white-space:pre-wrap;background:var(--main-muda);padding:16px;border-radius:12px;margin-top:10px}
+  footer{text-align:center;color:var(--text-redup);font-size:14px;margin-top:20px}
+  footer a{color:var(--main);font-weight:700}
+</style>
+</head>
+<body>
+<div class="box">
+  <header>
+    <img src="https://files.catbox.moe/u7hr1x.jpg" alt="Logo King Bangcats, gambar kucing">
+    <div>
+      <h1>King Bangcats</h1>
+      <p>Asisten AI kamu. Tanya apa saja.</p>
+    </div>
+  </header>
+
+  <form id="formChat">
+    <label for="input">Pesan kamu</label>
+    <textarea id="input" placeholder="Contoh: Buatkan 3 caption IG yang viral..."></textarea>
+    <button type="submit" id="tombol">Kirim ke King Bangcats</button>
+    <p class="hint">Tekan Ctrl + Enter untuk mengirim.</p>
+  </form>
+
+  <div id="status" aria-live="polite"></div>
+  <div id="jawaban" hidden aria-live="polite"></div>
+
+  <footer>© 2026 King Bangcats by C.K.A • Follow <a href="https://instagram.com/__kerass">@__kerass</a> & <a href="https://instagram.com/bangcats.id">@bangcats.id</a></footer>
+</div>
+<script src="app.js"></script>
+</body>
+</html>
