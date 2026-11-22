@@ -15,7 +15,7 @@ exports.handler = async (event) => {
         'Content-Type': 'application/json'
       },
       body: JSON.stringify({
-        model: 'llama-3.3-70b-versatile',
+        model: 'openai/gpt-oss-120b',
         messages: [
           { role: 'system', content: 'Kamu adalah King Bangcats, asisten ramah berbahasa Indonesia, santai, lucu, jawab singkat dan jelas.' },
           { role: 'user', content: message }
